@@ -43,7 +43,37 @@ Libs:
 - Open3D
 
 ## Imagens em profundidade
+Uma imagem de profundidade (também chamada de mapa de profundidade) é uma imagem em que cada pixel fornece seu valor de distância em relação ao sistema de coordenadas do sensor. <br>
+
+### Plotar nuvem de pontos de uma imagem em profundidade
+Após ler e carregar uma imagem em profundidade, podemos realizar a estimativa de sua nuvem de pontos. Para isso, a primeira etapa é calibrar a câmera de profundidade para estimar a matriz da câmera e, em seguida, usá-la para calcular a nuvem de pontos. A nuvem de pontos obtida também é chamada de nuvem de pontos 2,5D, pois é estimada a partir de uma projeção 2D (imagem de profundidade) em vez de sensores 3D, como sensores a laser.
+
+Calibrar uma câmera significa estimar os parâmetros da lente e do sensor encontrando os coeficientes de distorção e a matriz da câmera, também chamados de parâmetros intrínsecos.
+
+Calcular a nuvem de pontos aqui significa transformar o pixel de profundidade do sistema de coordenadas 2D da imagem de profundidade para o sistema de coordenadas 3D da câmera de profundidade ( x, y e z ).
+
+### pointcloud_from_depth.py
+Carregando uma imagem em profundidade e a nuvem de pontos correspondente com MatplotLib em tons de cinza.
+![image](https://user-images.githubusercontent.com/65053026/222753682-31d2137b-93de-4154-a8da-96262c0c8e1b.png) <br>
+![image](https://user-images.githubusercontent.com/65053026/222754057-a6763064-aebe-4c69-b61c-c914f6c2f761.png) <br>
+Libs:
+- Imageio
+- Numpy
+- MatplotLib
+- Open3D
+
+### colored_pointcloud_from_depth.py
+Carregando uma imagem em profundidade e a nuvem de pontos correspondente com MatplotLib com cores.
+![image](https://user-images.githubusercontent.com/65053026/222754215-823c907c-ee50-4892-90f2-10182fea1452.png) <br>
+![image](https://user-images.githubusercontent.com/65053026/222754447-3b6cc0a9-7f97-4bc4-97ff-38b49db56ee3.png) <br>
+Libs:
+- Imageio
+- Numpy
+- MatplotLib
+- Open3D
 
 ## Referências
 - https://betterprogramming.pub/introduction-to-point-cloud-processing-dbda9b167534
 - https://github.com/Chim-SO/pointcloudprocessing
+- https://docs.opencv.org/4.6.0/dc/dbb/tutorial_py_calibration.html
+- https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html
