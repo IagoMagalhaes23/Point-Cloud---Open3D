@@ -72,6 +72,34 @@ Libs:
 - MatplotLib
 - Open3D
 
+## Detecção de parede
+Nesta aula tentei realizar a detecção da uma parede em uma imagem de profundidade. Ainda existem alguns erros e claro o projeto pode ser melhorado, ele se basea no exemplo de deteccção do chão. Com base nas posições minímas e máximas das coordernadas X, Y e Z é possível identificar tais regiões.
+
+### computer_vision_coordinate_system.py
+Plotando pontos minímos e máximos das coordernadas X, Y e Z.
+![image](https://user-images.githubusercontent.com/65053026/223578096-493678ea-894f-453f-b836-d185ea6f60f3.png) <br>
+Libs:
+- Numpy
+- Open3D
+- ImageIo
+- MatplotLib
+
+### parede_detection.py
+Detecando a parede através de uma imagem de profundidade.
+![image](https://user-images.githubusercontent.com/65053026/223578421-e961a2e2-a1f1-4d83-b7d7-304442b45cce.png) <br>
+Libs:
+- Numpy
+- Open3D
+
+### organized_pointcloud.py
+Organizando a identificação da parede com a imagem em profundidade.
+![Parede_DepthImage](https://user-images.githubusercontent.com/65053026/223578607-7adc3251-d963-4090-bf60-96f14701c97d.png) <br>
+Libs:
+- ImageIO
+- Numpy
+- MatplotLib
+- Open3D
+
 ## Referências
 - https://betterprogramming.pub/introduction-to-point-cloud-processing-dbda9b167534
 - https://github.com/Chim-SO/pointcloudprocessing
