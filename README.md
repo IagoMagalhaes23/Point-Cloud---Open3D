@@ -100,8 +100,48 @@ Libs:
 - MatplotLib
 - Open3D
 
+## Filtragem de nuvem de pontos
+As nuvens de pontos computadas ou reunidas podem às vezes ser ruidosas devido à natureza dos scanners 3D usados ​​(como scanners de luz estruturada) ou da cena capturada (inclui materiais que absorvem luzes infravermelhas). Por outro lado, alguns algoritmos e/ou técnicas de visão computacional são sensíveis ao ruído, como estimar normais de superfície e mudanças de curvatura. - Chayma Zatout
+
+### Filtro de passagem
+O filtro Pass-through aplica restrições aos dados de entrada, que geralmente são limites ou intervalos. Para nuvens de pontos, um ponto passa pelo filtro se satisfizer as restrições que são principalmente intervalos ao longo de um ou mais eixos. Para reduzir o ruído, o intervalo geralmente é fixado de acordo com a natureza e o estado do dispositivo de entrada: os dados de profundidade são mais precisos dentro do intervalo e tornam-se mais ruidosos caso contrário. O filtro pass-through pode ser usado não apenas para filtrar a entrada do ruído, mas também para reduzir dados como considerar os pontos mais próximos.
+
+### Redução de amostragem
+O downsampling das nuvens de pontos consiste em reduzir o número de pontos. Geralmente é aplicado para reduzir o tempo de execução da etapa de processamento ou para selecionar um número exato de pontos para treinamento, por exemplo.
+
+### Filtros de remoção de outliers
+- A remoção de valores discrepantes do raio é um filtro condicional que remove todos os pontos que tenham menos do que um determinado número de vizinhos dentro de uma esfera de um determinado raio.
+- O filtro de remoção de outliers estatísticos remove pontos que estão mais distantes de seus vizinhos. Para cada ponto, a distância média dele para todos os seus vizinhos é calculada. Então, se a distância média do ponto estiver fora de um intervalo definido pela média e desvio padrão das distâncias globais, o ponto é um valor discrepante.
+
+
+
+
+### crop_pointcloud_o3d.py
+
+Libs:
+- 
+
+### downsampling.py
+
+Libs:
+- 
+
+### passthrough_filter_np.py
+
+Libs:
+- 
+
+### point_cloud_filtering.py
+
+Libs:
+- 
+
+## Segmentação de nuvem de pontos
+
 ## Referências
 - https://betterprogramming.pub/introduction-to-point-cloud-processing-dbda9b167534
 - https://github.com/Chim-SO/pointcloudprocessing
 - https://docs.opencv.org/4.6.0/dc/dbb/tutorial_py_calibration.html
 - https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html
+- http://www.open3d.org/docs/0.7.0/python_api/open3d.geometry.crop_point_cloud.html?highlight=crop_point_cloud#open3d.geometry.crop_point_cloud
+- https://betterprogramming.pub/point-cloud-filtering-in-python-e8a06bbbcee5
