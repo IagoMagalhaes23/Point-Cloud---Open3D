@@ -117,24 +117,31 @@ O downsampling das nuvens de pontos consiste em reduzir o número de pontos. Ger
 
 
 ### crop_pointcloud_o3d.py
+![image](https://user-images.githubusercontent.com/65053026/224492420-d6d02ca9-1dd5-4840-8fad-f4c1dfe180e3.png) <br>
 
 Libs:
-- 
+- Numpy
+- Open3D
+- Math
+- Itertools
 
 ### downsampling.py
-
+![image](https://user-images.githubusercontent.com/65053026/224492527-c38c0fdf-3dfd-4a59-9c9e-6b3c2ef1894a.png) <br>
 Libs:
-- 
+- Open3D
+- Numpy
 
 ### passthrough_filter_np.py
-
+![image](https://user-images.githubusercontent.com/65053026/224492637-29bb53bc-28ad-470d-80c2-b1a6d31f91c9.png) <br>
 Libs:
-- 
+- Open3D
+- Numpy
 
 ### point_cloud_filtering.py
-
+![image](https://user-images.githubusercontent.com/65053026/224492759-f7390604-7459-42c7-a8f3-331a50fbfd62.png) <br>
 Libs:
-- 
+- Open3D
+- Numpy
 
 ## Segmentação de nuvem de pontos
 Em geral, a segmentação de dados visa reagrupar os dados em grupos não sobrepostos. Na segmentação de nuvem de pontos, esses grupos podem corresponder a regiões: objetos ou parte deles, superfícies, planos, etc. . Neste tutorial, estamos interessados ​​em métodos baseados em clustering. Os algoritmos de agrupamento são implementados em muitas APIs de aprendizado de máquina, incluindo o Scikit-learn, que usaremos neste tutorial. - Chayma Zatout
