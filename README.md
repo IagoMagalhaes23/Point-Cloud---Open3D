@@ -137,6 +137,23 @@ Libs:
 - 
 
 ## Segmentação de nuvem de pontos
+Em geral, a segmentação de dados visa reagrupar os dados em grupos não sobrepostos. Na segmentação de nuvem de pontos, esses grupos podem corresponder a regiões: objetos ou parte deles, superfícies, planos, etc. . Neste tutorial, estamos interessados ​​em métodos baseados em clustering. Os algoritmos de agrupamento são implementados em muitas APIs de aprendizado de máquina, incluindo o Scikit-learn, que usaremos neste tutorial. - Chayma Zatout
+
+### K-means
+K-means é um algoritmo baseado em centroide. Ele divide as amostras de entrada em K grupos separados com variância igual enquanto minimiza as distâncias entre os pontos.
+
+### DBSCAN
+O algoritmo DBSCAN busca separar as amostras em clusters de alta densidade com áreas de baixa densidade. O número de clusters não precisa ser definido previamente. O DBSCAN é robusto a ruído: durante o agrupamento, os outliers são detectados e negligenciados e, portanto, o processo de agrupamento não é afetado por eles.
+
+### Projection_clustering.py
+
+Libs:
+- 
+
+### clustering.py
+
+Libs:
+- 
 
 ## Referências
 - https://betterprogramming.pub/introduction-to-point-cloud-processing-dbda9b167534
