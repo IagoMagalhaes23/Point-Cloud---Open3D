@@ -146,14 +146,28 @@ K-means é um algoritmo baseado em centroide. Ele divide as amostras de entrada 
 O algoritmo DBSCAN busca separar as amostras em clusters de alta densidade com áreas de baixa densidade. O número de clusters não precisa ser definido previamente. O DBSCAN é robusto a ruído: durante o agrupamento, os outliers são detectados e negligenciados e, portanto, o processo de agrupamento não é afetado por eles.
 
 ### Projection_clustering.py
+- Visualização com K-means
+![image](https://user-images.githubusercontent.com/65053026/224492020-11aaeb20-c13c-42a6-94f6-03b2c92e0f51.png) <br>
+- Visualização com DBSCAN
+![image](https://user-images.githubusercontent.com/65053026/224491914-8f1103d1-d59b-4bc4-ad85-4c1801746a7a.png) <br>
+- Visualização da projeção
+![image](https://user-images.githubusercontent.com/65053026/224491958-d99f0263-10d4-42cd-9205-fb55becfbebe.png) <br>
 
 Libs:
-- 
+- Numpy
+- Open3D
+- SKLearn
+- MatplotLib
 
 ### clustering.py
+- Segmentação utilizando K-means
+![image](https://user-images.githubusercontent.com/65053026/224492179-3cf2ba8f-92bf-4150-80b8-f7e3ce1731b8.png) <br>
 
 Libs:
-- 
+- Numpy
+- Open3D
+- SKLearn
+- MatplotLib
 
 ## Referências
 - https://betterprogramming.pub/introduction-to-point-cloud-processing-dbda9b167534
